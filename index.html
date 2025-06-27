@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label>Password: </label>
+        <input type="password" v-model="password" />
+        <conditional-component condition_name="U" :style="uStyleObject" ></conditional-component>
+        <conditional-component condition_name="L" :style="lStyleObject" ></conditional-component>
+        <conditional-component condition_name="N" :style="nStyleObject" ></conditional-component>
+        <conditional-component condition_name="$" :style="sStyleObject" ></conditional-component>
+
+    </div>
+    
+</body>
+
+<script type="module" src="app.js"></script>
+</html>
