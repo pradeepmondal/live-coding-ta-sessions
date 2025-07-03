@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Hacker News Search</h1>
+        <input type="text" v-model="search_param" placeholder="Search for results..." />
+        <button @click="search">Search</button>
+        <table v-if="search_results.length > 0">
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Author
+                </th>
+                <th>
+                    Url
+                </th>
+            </tr>
+            
+            <tr v-for="item in search_results">
+               
+
+                <td>{{item.title ? item.title : 'Not available'}}</td>
+                <td>{{item.author ? item.author : 'Not available'}}</td>
+                <td><a :href="item.url">{{item.url}}</a></td>
+                
+            </tr>
+        </table>
+
+
+        
+
+    </div>
+    
+</body>
+
+<script type="module" src="app.js"></script>
+</html>
